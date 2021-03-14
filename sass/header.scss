@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body{
+    position: relative;
+    font-family: $fuenteText1;
+    
+}
+
+
+// Estructura Mobile first
+.header{
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @include imageViewport(120vh,'../img/principal.jpg');
+    z-index: -1;
+}
+
+.nav{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+}
+
+
+.containerMenu1{
+    width: 100%;
+    height: 80px;
+     display: flex;
+     flex-direction: row;
+
+
+    &__logo{
+        width: 50%;
+        font-size: 2.5rem;
+        font-family: $fuenteTextLogo;
+        color: $bg-green;
+        
+        // centrar
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .marcado{
+            color: $bg-red;
+        }
+    }
+    &__navMenu{
+          width: 50%;
+          background-color: white;
+
+          display: flex;
+          justify-content: flex-end;
+    }
+}
+
+.containerMenu2{
+    width: 100%;
+    height: auto;
+    display: none;
+    position: relative;
+    z-index: 10;
+
+    &__enlaces{
+        display: block;
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.1rem;
+        padding: 3px;
+    }
+
+    &__enlaces:nth-child(odd):hover{text-decoration: 2px $bg-green underline;}
+    &__enlaces:nth-child(even):hover{text-decoration: 2px $bg-red underline;}
+
+    &__i{
+        color: gray;
+        margin-right: 8px;
+    }
+}
+
+.activarMenu{
+    display: block;
+}
+
+.contenido{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 0;
+
+    &__section{
+        width: 95%;
+        height: auto;
+        @include centrarAbsolute();
+        padding: $paddingTopBottom;
+    }
+
+    &__h2{
+        text-align: center;
+        font-family: $fuenteTitle;
+        font-size: 2.2rem;
+        color: white;
+        border-bottom: 2px solid white;
+    }
+
+    &__p{
+       color: white;
+       font-size: 19px; 
+       padding: $paddingTopBottom;
+       text-align: center;
+    }
+
+    &__btn{
+        width: 140px;
+        height: auto;
+        text-decoration: none;
+        color: white;
+        border: 3px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        display: block;
+        margin: 3px auto;
+        font-size: 1.1rem;
+    }
+
+    &__down{
+        width: 100%;
+        color: white;
+        font-size: 2.7rem;
+        text-align: center;
+        transform: translateY(40px);
+        animation: deslizar 2s ease-in infinite;
+        cursor: pointer;
+    }
+
+}
+
+@keyframes deslizar {
+    0%{
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+    }
+
+    100%{
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        transform: translateY(50px);
+    }
+}
+
+// ------------------------------------------------------------------
+
+
+
+// media querie para dispositivos tablets
+@media screen and (min-width:500px){
+    
+    .header{
+        height: 70vh;
+    }
+    
+    .header::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        @include imageViewport(70vh,'../img/principal.jpg');
+        z-index: -1;
+    }
+
+    .contenido{
+        height: 60vh;
+
+        &__section{
+           width: 85%;
+        }
+
+        &__h2{
+           text-align: center;
+           font-family: $fuenteTitle;
+           font-size: 3rem;
+           color: white;
+           border-bottom: 2px solid white;
+           padding: $paddingTopBottom;
+           text-transform: uppercase;
+       }
+
+       &__p{
+           margin-top: 15px;
+           text-align: center;
+           font-size: 1.2rem;
+           color: #fdfdfd;
+       }
+
+    }
+
+
+}
+// --------------------------------------------------
+
+
+
+
+
+
+
+// --------------------------------------------------------------------
+// media querie para dispositivos desktop
+@media screen and (min-width:1025px){
+
+    .header{
+        height: 100vh;
+    }
+    
+    .header::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        @include imageViewport(100vh,'../img/principal.jpg');
+        z-index: -1;
+    }
+     
+    .nav{
+      width: 80%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin: auto;
+      transform: translateY(30px);
+      border-radius: 5px;
+    }
+
+
+     .containerMenu1{
+         width: 25%;
+         height: 95px;
+
+        &__logo{
+            width: 100%;
+            font-size: 3.2rem;
+        }
+         &__navMenu{
+             display: none;
+         }
+     }
+
+     .containerMenu2{
+        width: 75%;
+        height: 95px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__enlaces{
+            display: inline-block;
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
+     }
+
+     .contenido{
+         height: 80vh;
+
+         &__section{
+            width: 75%;
+         }
+
+         &__h2{
+            text-align: center;
+            font-family: $fuenteTitle;
+            font-size: 3.4rem;
+            color: white;
+            border-bottom: 2px solid white;
+            padding: $paddingTopBottom;
+            text-transform: uppercase;
+        }
+
+        &__p{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #fdfdfd;
+        }
+
+        &__down{
+            animation: deslizar 2s ease-in-out infinite;
+        }
+        
+     }
+
+
+     @keyframes deslizar {
+        0%{
+            opacity: 0;
+            transition: opacity .2s ease-in-out;
+        }
+    
+        100%{
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            transform: translateY(60px);
+        }
+    }
+
+}
+// --------------------------------------------------

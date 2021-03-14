@@ -1,0 +1,115 @@
+.footer {
+  width: 100%;
+  height: auto;
+}
+
+.containerFooter {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+.containerFooter__items {
+  width: 100%;
+  height: 300px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerFooter__items:nth-child(1) {
+  border-right: 20px solid #08BA1A;
+}
+.containerFooter__items:nth-child(2) {
+  border-right: 20px solid white;
+}
+.containerFooter__items:nth-child(3) {
+  border-right: 20px solid #FF0E0E;
+}
+.containerFooter__lista {
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+.containerFooter__lista .li {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.containerFooter__img {
+  width: 200px;
+  height: 200px;
+}
+.containerFooter__name {
+  font-size: 3rem;
+  font-family: "Oleo Script Swash Caps", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.derechos {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .containerFooter {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+  }
+  .containerFooter__item {
+    width: 33%;
+  }
+  .containerFooter__items:nth-child(1) {
+    border-top: 25px solid #08BA1A;
+    border-right: 0 solid #08BA1A;
+  }
+  .containerFooter__items:nth-child(2) {
+    border-top: 25px solid white;
+    border-right: 0 solid white;
+  }
+  .containerFooter__items:nth-child(3) {
+    border-top: 25px solid #FF0E0E;
+    border-right: 0 solid #08BA1A;
+  }
+  .containerFooter__lista {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .containerFooter__lista .li {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .containerFooter {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+  }
+  .containerFooter__item {
+    width: 30%;
+  }
+  .containerFooter__lista {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .containerFooter__lista .li {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .containerFooter__img {
+    width: 220px;
+    height: 220px;
+  }
+  .containerFooter__name {
+    font-size: 4rem;
+    font-family: "Oleo Script Swash Caps", Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

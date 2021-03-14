@@ -1,0 +1,88 @@
+.section1 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: white;
+}
+
+.containerPost {
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+}
+.containerPost__contentImage {
+  width: 100%;
+  height: auto;
+}
+.containerPost__image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.containerPost__name {
+  width: 150px;
+  padding: 7px 0;
+  background-color: #FF0E0E;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+  transform: translateY(-35px);
+  font-family: "Oleo Script Swash Caps", Verdana, Geneva, Tahoma, sans-serif;
+}
+.containerPost__post {
+  width: 100%;
+  height: auto;
+  padding: 20px 10px;
+}
+.containerPost__h2 {
+  text-align: center;
+  font-family: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
+  color: #333333;
+}
+.containerPost__info {
+  color: gray;
+  width: 100%;
+  height: auto;
+  display: block;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+.containerPost__parrafo {
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.containerPost__btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 5px;
+  background-color: #08BA1A;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  .containerPost {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .containerPost {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .containerPost__contentImage {
+    width: 40%;
+    height: auto;
+  }
+  .containerPost__post {
+    width: 60%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=mainBlog.css.map */

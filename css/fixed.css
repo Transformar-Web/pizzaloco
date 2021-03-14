@@ -1,0 +1,60 @@
+.fixedContainer {
+  width: 80px;
+  height: 170px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (min-width: 650px) {
+  .fixedContainer {
+    bottom: 330px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .fixedContainer {
+    right: 10px;
+    bottom: 0;
+  }
+}
+.fixedContainer__contentWhatsApp {
+  width: 60px;
+  height: 60px;
+  margin: 12px auto;
+  border-radius: 50%;
+  background-color: #08BA1A;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fixedContainer__icons {
+  width: 65%;
+}
+.fixedContainer__contentNoti {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background-color: #FF0E0E;
+  border: 3px solid white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tippy-box[data-theme~=green] {
+  background-color: #08BA1A;
+  color: white;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.tippy-box[data-theme~=red] {
+  background-color: #FF0E0E;
+  color: white;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=fixed.css.map */

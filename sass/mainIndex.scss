@@ -1,0 +1,659 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+
+// Metodologia Mobile first
+
+// Estructura contenedor padre principal
+.section1{
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+}
+
+// subcontenedores 
+.vista1 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 30px;
+    left: 0;
+
+    &__items{
+        width: 100%;
+        height: 350px;
+        background-color: #ffffff;
+    }
+    &__h2{
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.9rem;
+        font-family: $fuenteTextLogo;
+        color: #333333;
+    }
+    &__small{
+        text-align: center;
+        font-size: 15px;
+        color: grey;
+        margin-top: 10px;
+    }
+    &__text {
+        width: 90%;
+        height: auto;
+        margin: 15px auto;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    &__items:nth-child(2){
+        width: 100%;
+        height: auto;
+        @include flexDirection(column);
+    }
+    &__boxImage{
+        width: 90%;
+        height: 300px;
+        margin: 10px  auto;
+        object-fit: cover;
+        box-shadow: 2px 1px 3px grey;
+        clip-path: circle(90% at top) ;
+    }
+
+}
+// -------------------------------------------------------
+// -------------------------------------------------------
+
+// section2 
+.section2{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    position: relative;
+}
+
+// subcontenedores 
+.vista2{
+    width: 100%;
+    height: auto;
+    @include backgroundImage("../img/background2.jpg");
+    background-attachment: fixed;
+   
+
+    &__present{
+        width: 100%;
+        height: auto;
+        // background-color: rgba(0,0,0,0.4);
+    }
+
+    &__title{
+        color: white;
+        font-family: $fuenteTitle;
+        font-size: 2.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+    &__p{
+        color: rgb(252, 173, 2);
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__contentimg{
+        width: 100%;
+        height: auto;
+        @include flexDirection(column);
+    }
+    &__social{
+      opacity: 0;
+    }
+    &__itemImg{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+    &__img{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        display: block;
+    }
+    &__descrip{
+        text-align: center;
+        color: #333333;
+        background-color: white;
+        font-weight: 600;
+        font-size: 1.8rem;
+        border-top: 9px solid $bg-green;
+        border-bottom: 9px solid $bg-red;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+
+    &__vermas{
+        @include enlaceBorder();
+    }
+    &__vermas:hover{
+        background-color: white;
+        color: #333333;
+        transition: .2s ease-in-out;
+    }
+}
+// ----------------------------------------------
+// ----------------------------------------------
+
+// section3 
+
+.section3{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 25px 0;
+}
+
+.vista3{
+    width: 100%;
+    height: auto;
+   
+
+    &__textServe{
+        text-align: center;
+        font-family: $fuenteTitle;
+        text-transform: uppercase;
+        font-size: 2.3rem;
+    }
+
+    &__content{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        @include flexDirection(column);
+    }
+
+    &__contentItem{
+        width: 100%;
+        height: auto;
+        background-color: #f2f2f2;
+        border-radius: 40px;
+        margin: 10px 0;
+    }
+
+    &__imgIcon{
+        width: 200px;
+        height: 100px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    &__h3{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.6rem;
+        columns: #333333;;
+    }
+
+    &__p{
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+// section 4
+.section4{
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    padding: 20px 0;
+    position: relative;
+    @include backgroundImage("../img/background2.jpg");
+    background-attachment: fixed;
+}
+
+// subcontenedor 1 de la section4
+.vista4{
+    width: 100%;
+    height: auto;
+    padding: $paddingTopBottom;
+
+    @include flexDirection(column);
+    
+
+    &__content1{
+      width: 90%;
+      height: 300px;
+      margin: auto;
+      background-color: white;
+      @include backgroundImage("../img/restaurant.jpg");
+      border: 7px solid white;
+    }
+
+    &__content2{
+        width: 95%;
+        height: 300px;
+        margin: auto;
+    }
+    &__title{
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        padding: 15px 0;
+        font-family: $fuenteTextLogo;
+    }
+
+    &__p{
+        color: white;
+        text-align: center;
+    }
+    &__btnContact{
+        color: white;
+        font-size: 1.4rem;
+        padding: 5px;
+        width: 200px;
+        height: auto;
+        margin: 35px auto;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: $bg-red;
+    }
+}
+// ---------------------------------
+
+// subcontenedor 2 de la section4
+.infoContainer{
+    width: 100%;
+    height: auto;
+    @include flexDirection(column);
+    
+    &__socials{
+        width: 100%;
+        height: 100px;
+        color: white;
+        font-size: 2.4rem;
+        @include centrarFlex();
+
+        .icon{
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &__horario{
+        width: 100%;
+        height: 100px;
+        // background-color: rgba(0,0,0,0.4);
+    }
+    &__text{
+        color: white;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    &__hora{
+        text-align: center;
+        color: white;
+    }
+
+    &__correo{
+        width: 100%;
+        height: 100px;
+        // background-color: rgba(0,0,0,0.4);
+    }
+    &__textemail{
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+    }
+    // -----------------------------------
+}
+
+ // subcontenedor 3 de la section4
+
+ 
+
+ .containerSliderComments{
+    width: 90%;
+    height: auto;
+    margin: auto;
+
+
+    .h2comments{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+        
+
+    .content{
+        width: 100%;
+        height: auto;
+        // background-color: rgba(0,0,0,0.2);
+        padding: 15px 4px;
+
+        &__img{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    
+        &__h3{
+            text-align: center;
+            color: white;
+            font-size: 1.4rem;
+        }
+    
+        &__textClient{
+            text-align: center;
+            font-size: 1.4rem;
+            color: white;
+        }
+    
+        &__p{
+            // padding: 5px;
+            color: white;
+            text-align: center;
+        }
+    }
+
+}   
+
+
+
+// --------------------------------------
+// --------------------------------------
+
+
+
+
+// media querie que se adapta a dispositivos tablets
+
+@media screen and (min-width:500px){
+
+   // section1    
+   // subcontenedores --> de la section 1
+.vista1 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 30px;
+    left: 0;
+    @include flexDirection(row);
+
+    &__items{
+        width: 100%;
+        height: 350px;
+    }
+
+    &__h2{
+        font-size: 2.2rem;
+    }
+    &__text {
+        width: 98%;
+        height: auto;
+        margin: 15px auto;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    &__items:nth-child(2){
+        width: 100%;
+        height: auto;
+        @include flexDirection(row);
+    }
+    &__boxImage{
+        width: 90%;
+        height: 300px;
+        margin: 10px  auto;
+        object-fit: cover;
+        box-shadow: 2px 1px 3px grey;
+        clip-path: circle(90% at right) ;
+    }
+}
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+   // section2    
+   // subcontenedores --> de la section 2
+   .vista2{
+        &__contentimg{
+            width: 100%;
+            height: auto;
+            @include flexDirection(column);
+            position: relative;
+        }
+        &__social{
+          width: 70px;
+          height: auto;
+          background-color: rgba(0,0,0,0.4);
+          position: absolute;
+          top: 40vh;
+          left: 0;
+          @include flexDirection(column);
+          opacity: 1;
+
+           .icon{
+               color: rgba(255, 255, 255, 0.918);
+               font-size: 2.4rem;
+               text-align: center;
+               padding: 7px;
+               cursor: pointer;
+           }
+        }
+
+        &__itemImg{
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        &__img{
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: auto;
+        }
+        &__descrip{
+            text-align: center;
+            width: 50%;
+        }
+   }
+// --------------------------------------------------
+// --------------------------------------------------
+
+ // section 4 
+
+    .vista4 {
+        @include flexDirection(row);
+        
+        &__content1{
+            width: 50%;
+        }
+        &__content2{
+            width: 50%;
+        }
+        
+        &__p{
+            padding: 5px;
+        }
+    }
+
+
+}
+
+
+// media querie que se adapta a dispositivos desktop
+
+@media screen and (min-width:1025px){
+    
+    // section1
+    // subcontenedores --> de la section 1
+ .vista1 {
+     width: 85%;
+     height: auto;
+     margin: auto;
+     position: relative;
+     top: 30px;
+     left: 0;
+     @include flexDirection(row);
+     
+ 
+     &__items{
+         width: 100%;
+         height: 350px;
+     }
+     &__small{
+        width: 80%;
+        height: auto;
+        margin:auto;
+        font-size: 15px;
+    }
+ 
+     &__h2{
+         font-size: 2.5rem;
+     }
+ 
+     &__items:nth-child(2){
+         width: 100%;
+         height: auto;
+         @include flexDirection(row);
+     }
+     &__boxImage{
+         width: 90%;
+         height: 300px;
+         margin: 10px  auto;
+         object-fit: cover;
+         box-shadow: 2px 1px 3px grey;
+         clip-path: circle(90% at right) ;
+     }
+ }
+//  -------------------------------------------------------
+// --------------------------------------------------------
+ 
+// section2    
+   // subcontenedores --> de la section 2
+   .vista2{
+
+        &__title{
+            font-size: 3rem;
+        }
+        &__contentimg{
+            width: 100%;
+            height: auto;
+            @include flexDirection(column);
+        }
+        &__social{
+          position: absolute;
+          top: 55vh;
+          left: 0;
+
+          .icon{font-size: 2.7rem;}
+          
+        }
+        &__itemImg{
+            width: 60%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        &__img{
+            width: 350px;
+            height: 350px;
+            display: block;
+            margin: auto;
+        }
+        &__descrip{
+            text-align: center;
+            width: 50%;
+        }
+}
+// --------------------------------------------------
+// --------------------------------------------------
+
+//  section3
+    .vista3 {
+        height: 450px;
+
+        &__textServe{
+           font-size: 2.8rem;
+        }
+        &__content{
+            width: 80%;
+            height: auto;
+            margin: auto;
+            @include flexDirection(row);
+        }
+        &__contentItem{
+            width: 33.33%;
+            height: auto;
+            border-radius: 40px;
+            margin: 15px;
+        }
+    }
+    // --------------------------------------------
+    // --------------------------------------------
+
+    // section 4
+
+    .vista4 {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        @include flexDirection(row);
+       
+        &__content1{
+            width: 450px;
+            height: 300px;
+            border: 10px solid white;
+            background-color: honeydew;
+        }
+        &__content2{
+            width: 45%;
+        }
+        &__p{
+            padding: 5px;
+        }
+    }
+    
+
+    .infoContainer{
+            width: 100%;
+            height: 150px;
+             @include flexDirection(row);
+            
+             &__socials{
+                 width: 33.33%;
+                 height: auto;
+             }
+             &__horario{
+                width: 33.33%;
+                height: auto;
+                @include centrarFlex();
+            }
+            &__correo{
+                width: 33.33%;
+                height: auto;
+                @include centrarFlex();
+            }
+    
+        }
+
+     
+
+   
+ }

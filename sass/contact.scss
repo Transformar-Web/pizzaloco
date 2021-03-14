@@ -1,0 +1,108 @@
+@import '_mixins.scss';
+@import '_variables.scss'; 
+
+
+// Mobile first
+
+.containerContact{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    visibility: hidden;
+    @include centrarFlex();
+}
+
+.activeModal{
+    visibility: visible;
+}
+
+.form-container{
+    width: 90%;
+    height: 500px;
+ 
+   
+
+    &__icon{
+        font-size: 2.5rem;
+        color: white;
+        float: right;
+        margin: 8px 0;
+        cursor: pointer;
+    }
+
+    &__form{
+        width: 100%;
+        height: 400px;
+        background-color: #ffffff;
+        clear: both;
+        border-radius: 5px;
+    }
+
+    &__h2{
+        text-align: center;
+        font-size: 2rem;
+        font-family: $fuenteTitle;
+        background-color:$bg-green;
+        color: white;
+        padding: 15px 0;
+    }
+
+    &__containerInputs{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    &__label{
+        font-size: 1.1rem;
+        color: grey;
+        text-transform: uppercase;
+    }
+
+    &__input{
+        width: 100%;
+        height: 30px;
+        margin: auto;
+        border: none;
+        background: none;
+        border-bottom: thin solid gray;
+        margin: 5px;
+        display: block;
+        
+    }
+
+    &__check{
+        margin-top: 20px;
+    }
+
+    &__btn{
+        color: white;
+        font-size: 1.2rem;
+        padding: 7px;
+        width: 150px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        border: none;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        background: $bg-red;
+        cursor: pointer;
+    }
+}
+
+
+//media querie para tablets
+
+@media screen and (min-width:500px ){
+   .form-container{
+       width: 360px ;
+   }
+}

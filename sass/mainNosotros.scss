@@ -1,0 +1,213 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+
+// Mobile First
+
+.section1{
+    width: 100%;
+    height: auto;
+}
+
+
+.containerAbout{
+    width: 100%;
+    height: auto;
+    background: white;
+    transform: translateY(15px);
+    @include flexDirection(column);
+
+
+    &__content{
+        width:  100%;
+        height: auto;
+        background-color: white;
+        // padding: 15px 0;
+    }
+    &__h2{
+        text-align: center;
+        font-family: $fuenteTitle;
+        font-size: 2rem;
+    }
+    &__firstP{
+        color: gray;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    &__secondP{
+      width: 98%;
+      height: auto;
+      margin: auto;
+      padding: 0 10px ;
+      text-align: justify;
+      font-size: 17px;
+    }
+    &__lista{
+        width: 95%;
+        height: auto;
+        margin: auto;
+        padding: 15px 0;
+
+        li{
+            list-style: none;
+            text-transform: uppercase;
+        }
+
+        i{
+            color: $bg-green;
+            margin: 0 10px;
+        }
+    }
+
+
+    &__bgImg{
+        width: 100%;
+        height: 350px;
+        @include backgroundImage("../img/demostra.jpg");
+        @include centrarFlex();
+    }
+    &__name{
+        text-align: center;
+        color: white;
+        font-family: $fuenteTextLogo;
+        font-size: 4rem;
+        text-decoration: underline;
+    }
+}
+// ----------------------------------------------------------
+
+.section2{
+    width: 95%;
+    height: auto;
+    margin: 30px auto;
+}
+
+.containerTeam{
+  width: 100%;
+  height: auto;
+    
+
+    &__h2{
+        font-size: 1.9rem;
+        text-align: center;
+        font-family: $fuenteTitle;
+        color: #333333;
+        padding: 15px 0;
+    }
+
+    &__contentPersons{
+         width: 100%;
+         height: auto;
+         @include flexDirection(column);
+    }
+    &__contentItems{
+        width: 85%;
+        height: auto;
+        margin: 20px auto;
+    }
+    &__img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    &__img:hover{
+       box-shadow: 0 1px 5px gray;
+    }
+    &__h3{
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-family: $fuenteTitle;
+        text-decoration: underline;
+        color: #333333;
+    }
+    &__name{
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}
+// -----------------------------------------------
+
+// media querie para tablets
+@media screen and (min-width:500px){
+
+    
+   
+    // parte del section1
+    .containerAbout{
+        
+        &__h2{
+            font-size: 2.5rem;
+        }
+
+        &__name{
+            font-size: 5.5rem;
+        }
+    }
+    // -----------------------
+
+    // parte de la section2
+     .containerTeam{
+         width: 90%;
+         height: auto;
+         margin: auto;
+
+         &__h2{
+            font-size: 2.3rem;
+        }
+         
+         &__contentPersons{
+            width: 100%;
+            height: auto;
+            @include flexDirection(row);
+            flex-wrap: wrap;
+       }
+
+         &__contentItems{
+            width: 40%;
+         }
+     }
+
+}
+
+
+// media querie para Desktop
+
+@media screen and (min-width:1025px){
+
+
+    // parte de la section1
+    .containerAbout{
+        @include flexDirection(row);
+        &__content{
+            width: 50%;
+            order: 2;
+        }
+        &__bgImg{
+            width: 50%;
+            height: 446px;
+            order: 1;
+        }
+    }
+
+     // parte de la section2
+     .containerTeam{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        
+        &__contentPersons{
+           width: 100%;
+           height: auto;
+           @include flexDirection(row);
+           flex-wrap: nowrap;
+      }
+
+        &__contentItems{
+           width: 20%;
+        }
+    }
+}
+

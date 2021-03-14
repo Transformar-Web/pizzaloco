@@ -1,0 +1,75 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.fixedContainer{
+    width: 80px;
+    height: 170px;
+    // background-color: rgba(128, 128, 128, 0.527);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    @media screen and (min-width:650px) {
+        bottom: 330px;
+    }
+    @media screen and (min-width:950px) {
+        right: 10px;
+        bottom: 0;
+    }
+
+
+    &__contentWhatsApp{
+        width: 60px;
+        height: 60px;
+        margin: 12px auto;
+        border-radius: 50%;
+        background-color: $bg-green;
+        cursor: pointer;
+
+        // centrar
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icons{
+       width: 65%;
+    }
+
+    &__contentNoti{
+        width: 60px;
+        height: 60px;
+        margin: 10px auto;
+        border-radius: 50%;
+        background-color: $bg-red;
+        border: 3px solid white;
+        cursor: pointer;
+
+         // centrar
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+}
+
+
+
+
+// clase tippy js custom
+
+.tippy-box[data-theme~='green'] {
+    background-color: $bg-green;
+    color: white;
+    padding: 5px;
+    // font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+.tippy-box[data-theme~='red'] {
+    background-color: $bg-red;
+    color: white;
+    padding: 5px;
+    // font-weight: 600;
+    font-size: 1.1rem;
+}
