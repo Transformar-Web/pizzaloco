@@ -53,3 +53,13 @@ const btnDeslizar = document.querySelector('.contenido__down');
 btnDeslizar.addEventListener("click",()=>{
     location.href = 'index.html#section1'
 })
+
+
+
+// Restricción navegador Safari
+if(navigator.userAgent.includes('Safari')){
+    let bgFixed1 = document.querySelectorAll(".bgFixed1");
+    bgFixed1.forEach(fixed => {
+       fixed.classList.replace('bgFixed1','bgFixed1-alt')
+    }) 
+ }

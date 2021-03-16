@@ -61,11 +61,6 @@
 .vista2 {
   width: 100%;
   height: auto;
-  background-image: url("../img/background2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 .vista2__present {
   width: 100%;
@@ -139,6 +134,30 @@
   transition: 0.2s ease-in-out;
 }
 
+.vista2 {
+  width: 100%;
+  height: auto;
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgFixed1 {
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bgFixed1-alt {
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .section3 {
   width: 100%;
   height: auto;
@@ -194,11 +213,6 @@
   margin: 30px 0;
   padding: 20px 0;
   position: relative;
-  background-image: url("../img/background2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .vista4 {
